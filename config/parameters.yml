@@ -1,0 +1,2 @@
+parameters:
+    minty.competitions.tables.competitions_table: '%core.table_prefix%minty_competitions_table'

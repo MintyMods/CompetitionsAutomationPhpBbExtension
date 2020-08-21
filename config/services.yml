@@ -1,0 +1,62 @@
+imports:
+    - { resource: parameters.yml }
+
+services:
+    minty.competitions.controller.main:
+        class: minty\competitions\controller\main_controller
+        arguments:
+            - '@config'
+            - '@controller.helper'
+            - '@template'
+            - '@language'
+
+    minty.competitions.controller.acp:
+        class: minty\competitions\controller\acp_controller
+        arguments:
+            - '@config'
+            - '@language'
+            - '@log'
+            - '@request'
+            - '@template'
+            - '@user'
+
+    minty.competitions.controller.mcp:
+        class: minty\competitions\controller\mcp_controller
+        arguments:
+            - '@language'
+            - '@request'
+            - '@template'
+
+    minty.competitions.service:
+        class: minty\competitions\service
+        arguments:
+            - '@user'
+            - '%minty.competitions.tables.competitions_table%'
+
+    minty.competitions.listener:
+        class: minty\competitions\event\main_listener
+        arguments:
+            - '@language'
+            - '@controller.helper'
+            - '@template'
+            - '%core.php_ext%'
+        tags:
+            - { name: event.listener }
+
+    minty.competitions.cron.task.sample:
+        class: minty\competitions\cron\task\sample
+        arguments:
+            - '@config'
+        calls:
+            - [set_name, [minty.competitions.cron.task.sample]]
+        tags:
+            - { name: cron.task }
+
+    minty.competitions.notification.type.sample:
+        class: minty\competitions\notification\type\sample
+        shared: false # service MUST not be shared for this to work!
+        parent: notification.type.base
+        calls:
+            - [set_controller_helper, ['@controller.helper']]
+        tags:
+            - { name: notification.type }

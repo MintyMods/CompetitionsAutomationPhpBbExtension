@@ -1,0 +1,3 @@
+minty_competitions_controller:
+    path: /demo/{name}
+    defaults: { _controller: minty.competitions.controller.main:handle }
