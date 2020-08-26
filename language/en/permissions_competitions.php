@@ -46,7 +46,7 @@ if (empty($lang) || !is_array($lang))
 */
 
 $lang = array_merge($lang, array(
-	'ACL_A_NEW_MINTY_COMPETITIONS'	=> 'Can use this Minty Competition Automation admin feature',
-	'ACL_M_NEW_MINTY_COMPETITIONS'	=> 'Can use this Minty Competition Automation moderator feature',
-	'ACL_U_NEW_MINTY_COMPETITIONS'	=> 'Can use this Minty Competition Automation user feature',
+	'ACL_A_NEW_MINTY_COMPETITIONS'	=> 'Can use Minty Competition Automation Admin feature',
+	'ACL_M_NEW_MINTY_COMPETITIONS'	=> 'Can use Minty Competition Automation Moderator feature',
+	'ACL_U_NEW_MINTY_COMPETITIONS'	=> 'Can use Minty Competition Automation User feature',
 ));

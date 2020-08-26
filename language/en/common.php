@@ -46,7 +46,7 @@ $lang = array_merge($lang, array(
 
 	'MINTY_COMPETITIONS_NOTIFICATION'	=> 'Minty Competition Automation notification',
 
-	'COMPETITIONS_PAGE'			=> 'Competitions Page',
-	'VIEWING_MINTY_COMPETITIONS'			=> 'Viewing Minty Competition Automation page',
+	'COMPETITIONS_PAGE'			=> 'Competitions',
+	'VIEWING_MINTY_COMPETITIONS'			=> 'Viewing Minty Competition Automation',
 
 ));

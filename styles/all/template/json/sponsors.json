@@ -1,0 +1,104 @@
+[
+   {
+      "key": "MISC",
+      "color": "#1BFF04",
+      "textColor": "#fff",
+      "label": "Misc - Unclassified"
+   },
+   {
+      "key": "ISL",
+      "color": "#000",
+      "textColor": "#000000",
+      "label": "Invisible Sun Led"
+   },
+   {
+      "key": "GQT",
+      "color": "#FFFF00",
+      "textColor": "#000000",
+      "label": "Green Qube Tents"
+   },
+   {
+      "key": "GC",
+      "color": "#FDFFB8",
+      "textColor": "#000000",
+      "label": "Growsers Choice"
+   },
+   {
+      "key": "RQS",
+      "color": "#5085FF",
+      "textColor": "#FFFFFF",
+      "label": "Royal Queen Seeds"
+   },
+   {
+      "key": "CB",
+      "color": "#BACCF8",
+      "textColor": "#000000",
+      "label": "Cheeba Beans"
+   },
+   {
+      "key": "DP",
+      "color": "#3ADBE3",
+      "textColor": "#FFFFFF",
+      "label": "Dutch Passion"
+   },
+   {
+      "key": "VCSS",
+      "color": "#3ADBE3",
+      "textColor": "#FFFFFF",
+      "label": "Vault Canabis Seed Store"
+   },
+   {
+      "key": "MS",
+      "color": "#FCBBC4",
+      "textColor": "#000000",
+      "label": "Mary's Seeds"
+   },
+   {
+      "key": "SS",
+      "color": "#FA0132",
+      "textColor": "#FFFFFF",
+      "label": "Seed Stockers"
+   },
+   {
+      "key": "SM",
+      "color": "#C501FA",
+      "textColor": "#FFFFFF",
+      "label": "Seedsman"
+   },
+   {
+      "key": "GSB",
+      "color": "#FA01AB",
+      "textColor": "#fff",
+      "label": "Gorilla Seed Bank"
+   },
+   {
+      "key": "LSC",
+      "color": "#C1F6FC",
+      "textColor": "#000000",
+      "label": "London Seed Centre"
+   },
+   {
+      "key": "DYN",
+      "color": "#85B79D",
+      "textColor": "#fff",
+      "label": "Dynomoco"
+   },
+   {
+      "key": "V4E",
+      "color": "#226633",
+      "textColor": "#FFF",
+      "label": "Vape4Ever"
+   },
+   {
+      "key": "DIN",
+      "color": "#85339D",
+      "textColor": "#FFF",
+      "label": "Dinafem Seeds"
+   },
+   {
+      "key": "HUM",
+      "color": "#85B755",
+      "textColor": "#FFF",
+      "label": "Humboldt Seeds"
+   }
+]

@@ -58,22 +58,22 @@ class install_sample_data extends \phpbb\db\migration\migration
 			// Add new permissions
 			array('permission.add', array('a_new_minty_competitions')), // New admin permission
 			array('permission.add', array('m_new_minty_competitions')), // New moderator permission
-			array('permission.add', array('u_new_minty_competitions')), // New user permission
+			array('permission.remove', array('u_new_minty_competitions')), // New user permission
 
 			// array('permission.add', array('a_copy', true, 'a_existing')), // New admin permission a_copy, copies permission settings from a_existing
 
 			// Set our new permissions
 			array('permission.permission_set', array('ROLE_ADMIN_FULL', 'a_new_minty_competitions')), // Give ROLE_ADMIN_FULL a_new_minty_competitions permission
 			array('permission.permission_set', array('ROLE_MOD_FULL', 'm_new_minty_competitions')), // Give ROLE_MOD_FULL m_new_minty_competitions permission
-			array('permission.permission_set', array('ROLE_USER_FULL', 'u_new_minty_competitions')), // Give ROLE_USER_FULL u_new_minty_competitions permission
-			array('permission.permission_set', array('ROLE_USER_STANDARD', 'u_new_minty_competitions')), // Give ROLE_USER_STANDARD u_new_minty_competitions permission
-			array('permission.permission_set', array('REGISTERED', 'u_new_minty_competitions', 'group')), // Give REGISTERED group u_new_minty_competitions permission
+			array('permission.permission_unset', array('ROLE_USER_FULL', 'u_new_minty_competitions')), // Give ROLE_USER_FULL u_new_minty_competitions permission
+			array('permission.permission_unset', array('ROLE_USER_STANDARD', 'u_new_minty_competitions')), // Give ROLE_USER_STANDARD u_new_minty_competitions permission
+			array('permission.permission_set', array('REGISTERED', 'u_new_minty_competitions', 'group', false)),
 			array('permission.permission_set', array('REGISTERED_COPPA', 'u_new_minty_competitions', 'group', false)), // Set u_new_minty_competitions to never for REGISTERED_COPPA
 
 			// Add new permission roles
 			array('permission.role_add', array('competitions admin role', 'a_', 'a new role for admins')), // New role "competitions admin role"
 			array('permission.role_add', array('competitions moderator role', 'm_', 'a new role for moderators')), // New role "competitions moderator role"
-			array('permission.role_add', array('competitions user role', 'u_', 'a new role for users')), // New role "competitions user role"
+			array('permission.role_remove', array('competitions user role', 'u_', 'a new role for users')), // New role "competitions user role"
 
 			// Call a custom callable function to perform more complex operations.
 			array('custom', array(array($this, 'sample_callable_install'))),

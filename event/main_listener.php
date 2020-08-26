@@ -80,7 +80,7 @@ class main_listener implements EventSubscriberInterface
 	public function add_page_header_link()
 	{
 		$this->template->assign_vars(array(
-			'U_COMPETITIONS_PAGE'	=> $this->helper->route('minty_competitions_controller', array('name' => 'world')),
+			'U_COMPETITIONS_PAGE'	=> $this->helper->route('minty_competitions_controller', array('name' => 'automation')),
 		));
 	}
 
@@ -91,10 +91,10 @@ class main_listener implements EventSubscriberInterface
 	 */
 	public function viewonline_page($event)
 	{
-		if ($event['on_page'][1] === 'app' && strrpos($event['row']['session_page'], 'app.' . $this->php_ext . '/demo') === 0)
+		if ($event['on_page'][1] === 'app' && strrpos($event['row']['session_page'], 'app.' . $this->php_ext . '/minty') === 0)
 		{
 			$event['location'] = $this->language->lang('VIEWING_MINTY_COMPETITIONS');
-			$event['location_url'] = $this->helper->route('minty_competitions_controller', array('name' => 'world'));
+			$event['location_url'] = $this->helper->route('minty_competitions_controller', array('name' => 'automation'));
 		}
 	}
 

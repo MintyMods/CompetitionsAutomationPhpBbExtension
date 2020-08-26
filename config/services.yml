@@ -9,6 +9,10 @@ services:
             - '@controller.helper'
             - '@template'
             - '@language'
+            - '@auth'
+            - '@user'
+            - '@request'
+            - '@dbal.conn'
 
     minty.competitions.controller.acp:
         class: minty\competitions\controller\acp_controller

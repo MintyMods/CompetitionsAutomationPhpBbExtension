@@ -14,7 +14,7 @@ class install_sample_schema extends \phpbb\db\migration\migration
 {
 	public function effectively_installed()
 	{
-		return $this->db_tools->sql_column_exists($this->table_prefix . 'users', 'user_competitions');
+		return $this->db_tools->sql_column_exists($this->table_prefix . 'users', 'minty_competitions');
 	}
 
 	public static function depends_on()
@@ -45,20 +45,31 @@ class install_sample_schema extends \phpbb\db\migration\migration
 	{
 		return array(
 			'add_tables'		=> array(
-				$this->table_prefix . 'minty_competitions_table'	=> array(
-					'COLUMNS'		=> array(
-						'competitions_id'			=> array('UINT', null, 'auto_increment'),
-						'competitions_name'			=> array('VCHAR:255', ''),
+				$this->table_prefix . 'minty_competition_events'	=> array(
+					'COLUMNS'			=> array(
+						'id'			=> array('UINT', NULL),
+						'text'			=> array('VCHAR:2046', ''),
+						'start_date'	=> array('TIMESTAMP'),
+						'end_date'		=> array('TIMESTAMP'),
+						'sponsor'		=> array('UINT',0),
+						'template'		=> array('UINT',0),
+						'rules'			=> array('UINT',0),
+						'prize'			=> array('UINT',0),
+						'created_by'	=> array('UINT',0),
+						'won_by'		=> array('UINT',0),
+						'post_to'		=> array('UINT',0),
+						'status'		=> array('UINT',0),
 					),
-					'PRIMARY_KEY'	=> 'competitions_id',
+					'PRIMARY_KEY'	=> 'id',
 				),
 			),
 			'add_columns'	=> array(
 				$this->table_prefix . 'users'			=> array(
-					'user_competitions'				=> array('UINT', 0),
+					'minty_competitions'				=> array('UINT', 0),
 				),
 			),
 		);
+
 	}
 
 	/**
@@ -86,11 +97,11 @@ class install_sample_schema extends \phpbb\db\migration\migration
 		return array(
 			'drop_columns'	=> array(
 				$this->table_prefix . 'users'			=> array(
-					'user_competitions',
+					'minty_competitions',
 				),
 			),
 			'drop_tables'		=> array(
-				$this->table_prefix . 'minty_competitions_table',
+				$this->table_prefix . 'minty_competition_events',
 			),
 		);
 	}
