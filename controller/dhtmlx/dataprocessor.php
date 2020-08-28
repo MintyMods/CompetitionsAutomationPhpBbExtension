@@ -61,6 +61,7 @@ class DataProcessor{
 			
 		return $data;
 	}
+	
 	protected function get_ids(){
 		if (!isset($_POST["ids"]))
 			throw new Exception("Incorrect incoming data, ID of incoming records not recognized");

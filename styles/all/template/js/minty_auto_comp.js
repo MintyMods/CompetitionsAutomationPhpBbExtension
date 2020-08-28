@@ -81,51 +81,58 @@ window.addEventListener("DOMContentLoaded", function(){
         return true;
     }
 
-    let templates = [];
-    $(topics).each(function(i, topic) {
-        if (topic.startsWith('SPONSOR - ')) {
-            var parts  = topic.split("-");
-            var key = parts[1].trim();
-            var label = parts[2].trim();
-            var sponsor = {key,label};
-            templates.push(sponsor);
-        }
-    });
-    console.log("topics " , topics);
-    console.log("templates " , templates);
+    // let templates = [];
+    // $(topics).each(function(i, topic) {
+    //     if (topic.startsWith('SPONSOR - ')) {
+    //         var parts  = topic.split("-");
+    //         var key = parts[1].trim();
+    //         var label = parts[2].trim();
+    //         var sponsor = {key,label};
+    //         templates.push(sponsor);
+    //     }
+    // });
 
-    scheduler.config.responsive_lightbox = true;
-    scheduler.config.lightbox.sections = [
-        {name:"description", height:200, map_to:"text", type:"textarea", focus:true},
-        {name:"time", height:72, type:"calendar_time", map_to:"auto" }
-    ];
-
+    // let rules = ["Select Rule"];
+    let rules = [{ "key": "DEFAULT", "label": "10 Posts to Enter" }];
+    let templates = [{ "key": "DEFAULT", "label": "£1000 in vouchers + seeds" }];
+    let prizes = [{ "key": "DEFAULT", "label": "Denotes a Sponsor Specific Prize" }];
+    let created_by = [{ "key": "DEFAULT", "label": "Select who created" }];
+    let claimed_by = [{ "key": "DEFAULT", "label": "Select who Won" }];
+    let posted_to = [{ "key": "DEFAULT", "label": "Grow Room 420 Competitions" }];
+    let status = [{ "key": "DEFAULT", "label": "Automated" }];
     sponsors = loadJSON('/phpbb/ext/minty/competitions/styles/all/template/json/sponsors.json');
-
+    
     scheduler.config.responsive_lightbox = true;
     scheduler.config.multi_day = true;
     scheduler.config.prevent_cache = true;
     scheduler.config.details_on_create = true;
     scheduler.config.details_on_dblclick = true;
     scheduler.config.date_format = "%Y-%m-%d %H:%i";
-
+    
+    scheduler.config.responsive_lightbox = true;
     scheduler.config.lightbox.sections = [
-        { name: "Sponsor", tag: "SPONSOR:", type: "select", map_to: "sponsor", options: sponsors },
-        { name: "Template", tag: "TEMPLATE:", type: "select", map_to: "template", options: templates },
-        { name: "Competition Text", tag: "COMPTEXT:", height: 350, map_to: "text", type: "textarea" }
-        // { name: "Time", tag: "_TIME", type: "calendar_time", map_to: "time" } 
+        { name: "Sponsor", tag: "SPONSOR", type: "select", map_to: "sponsor", options: sponsors },
+        { name: "Template", tag: "TEMPLATE", type: "select", map_to: "template", options: templates },
+        { name: "Rules", tag: "RULE", type: "select", map_to: "rules", options: rules },
+        { name: "Prize", tag: "PRIZE", type: "select", map_to: "prize", options: prizes },
+        { name: "Post To", tag: "TARGET", type: "select", map_to: "post_to", options: posted_to },
+        //{ name: "Claimed By", tag: "CLAIMED", type: "select", map_to: "prizes", options: claimed_by },
+        { name: "Notes", tag: "COMPTEXT", map_to: "text", type: "textarea" },
+        //{ name: "Created By", tag: "CREATED", type: "select", map_to: "created_by", options: created_by },
+        { name: "Status", tag: "STATUS", type: "select", map_to: "status", options: status },
+        { name: "time", height:72, type:"calendar_time", map_to:"auto" }
     ];
 
     
-    resetConfig();
-    scheduler.attachEvent("onBeforeViewChange", resetConfig);
-    scheduler.attachEvent("onSchedulerResize", resetConfig);
+    // resetConfig();
+    // scheduler.attachEvent("onBeforeViewChange", resetConfig);
+    // scheduler.attachEvent("onSchedulerResize", resetConfig);
     scheduler.init('compitition_scheduler', new Date(), "month");
     //scheduler.load("/phpbb/ext/minty/competitions/styles/all/template/json/data.json");
     
-    document.querySelector(".add_event_button").addEventListener("click", function(){
-        scheduler.addEventNow();
-    });
+    // document.querySelector(".add_event_button").addEventListener("click", function(){
+    //     scheduler.addEventNow();
+    // });
     
     // scheduler.attachEvent("onEventAdded", function (id, event) {
     //     //event.color = getColour(event);
@@ -149,7 +156,7 @@ window.addEventListener("DOMContentLoaded", function(){
     scheduler.load(url);
     var dp = new dataProcessor(url);
     dp.init(scheduler);
-    dp.setTransactionMode("REST");
+    dp.enableDebug();
     
     dp.attachEvent("onBeforeUpdate", function(id, state, data){
         console.log(this);

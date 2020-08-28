@@ -11,6 +11,7 @@
 namespace minty\competitions\controller;
 use PDO;
 use SchedulerConnector;
+use LogMaster;
 /**
  * Minty Competition Automation main controller.
  */
@@ -39,6 +40,10 @@ class main_controller
 
 	/** @var \phpbb\db\driver\factory */
 	protected $db;
+
+	protected $log_file = "H:/Development/XAMPP/apps/phpbb/htdocs/ext/minty/competitions/minty_debug.log";
+
+	protected $table_name = "phpbb_minty_competition_events";
 
 	/**
 	 * Constructor
@@ -76,10 +81,46 @@ class main_controller
 	 * @return \Symfony\Component\HttpFoundation\Response A Symfony Response object
 	 */
 	public function handle($name) {
+		//$user_id = request_var('user_id', $user->data['user_id']);
+		$this->request->enable_super_globals();
+		
+		// var_dump($_SERVER["REQUEST_METHOD"]);
+		if ($name != 'automation') {
+			// header("Content-Type: application/json");
+			switch ($_SERVER["REQUEST_METHOD"]) {
+				case "GET":
+					return $this->getData(); 	
+					// $result = read($db, $_GET);
+				break;
+				case "POST":
+					
+					// $requestPayload = json_decode(file_get_contents("php://input")); 
+					// var_dump($requestPayload);
+					// $id = $requestPayload->id; 
+					// $action = $requestPayload->action; 
+					// $body = (array) $requestPayload->data; 
+					// $result = [ 
+					// 	"action" => $action 
+					// ]; 
+					// if ($action == "inserted") {; 
+					// 	$databaseId = create($db, $body); 
+					// 	$result["tid"] = $databaseId; 
+					// } elseif($action == "updated") { 
+					// 	update($db, $body, $id); 
+					// } elseif($action == "deleted") { 
+					// 	delete($db, $id); 
+					// } 
 
-		//var_dump($name);
-		if ($name == 'data') {
-			return $this->getData(); 	
+
+					return $this->getData();
+					// we'll implement this later
+				break;
+				default: 
+					throw new Exception("Unexpected Method"); 
+				break;
+			}
+			// echo json_encode($result);
+
 		}
 		return $this->getTopics($name); 
 	}
@@ -89,13 +130,15 @@ class main_controller
 	function getData() {
 		require("./config.php"); 
 		require("dhtmlx/scheduler_connector.php");
+		$this->request->enable_super_globals();
 		
-		var_dump($this->request); 
-		//echo "Hello world!";
+		// var_dump($this->request); 
+		// echo "Hello world!";
 		$res = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpasswd);
 		$connector = new SchedulerConnector($res);
-		$connector->render_table("phpbb_minty_competition_events","id","start_date,end_date,text");
-
+		$connector->enable_log($this->log_file);
+		LogMaster::log("Minty Competition Logging Enabled");
+		$connector->render_table($this->table_name,"id","start_date,end_date,text");
 		return $this->helper->render('@minty_competitions/test_body.html', 'test');
 	}
 
@@ -125,6 +168,42 @@ class main_controller
 		return $this->helper->render('@minty_competitions/competitions_body.html', $name);
 	}
 
-	
+		// create a new event
+	function create($db, $event){
+		$queryText = "INSERT INTO ' . $this->table_name . ' SET
+			`start_date`=?,
+			`end_date`=?,
+			`text`=?";
+		$queryParams = [
+			$event["start_date"],
+			$event["end_date"],
+			$event["text"]
+		];
+		$query = $db->prepare($queryText);
+		$query->execute($queryParams);
+		return $db->lastInsertId();
+	}
+	// update an event
+	function update($db, $event, $id){
+		$queryText = "UPDATE ' . $this->table_name . ' SET
+			`start_date`=?,
+			`end_date`=?,
+			`text`=?
+			WHERE `id`=?";
+		$queryParams = [
+			$event["start_date"],
+			$event["end_date"],
+			$event["text"],
+			$id
+		];
+		$query = $db->prepare($queryText);
+		$query->execute($queryParams);
+	}
+	// delete an event
+	function delete($db, $id){
+		$queryText = "DELETE FROM ' . $this->table_name . ' WHERE `id`=? ;";
+		$query = $db->prepare($queryText);
+		$query->execute([$id]);
+	}
 
 }
