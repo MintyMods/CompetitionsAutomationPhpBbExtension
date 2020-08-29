@@ -47,12 +47,18 @@ services:
         tags:
             - { name: event.listener }
 
-    minty.competitions.cron.task.sample:
-        class: minty\competitions\cron\task\sample
+    minty.competitions.cron.task.auto_posting_cron_task:
+        class: minty\competitions\cron\task\auto_posting_cron_task
         arguments:
             - '@config'
+            - '@user'
+            - '@log'
+            - '@dbal.conn'
+            - '@auth'
+            - '%core.root_path%'
+            - '%core.php_ext%'            
         calls:
-            - [set_name, [minty.competitions.cron.task.sample]]
+            - [set_name, [cron.task.auto_posting_cron_task]]
         tags:
             - { name: cron.task }
 

@@ -14,7 +14,7 @@ class install_cron extends \phpbb\db\migration\migration
 {
 	public function effectively_installed()
 	{
-		return isset($this->config['competitions_cron_last_run']);
+		return isset($this->config['auto_posting_cron_task_last_gc']);
 	}
 
 	public static function depends_on()
@@ -25,7 +25,8 @@ class install_cron extends \phpbb\db\migration\migration
 	public function update_data()
 	{
 		return array(
-			array('config.add', array('competitions_cron_last_run', 0)),
+			array('config.add', array('auto_posting_cron_task_last_gc', 0)),
+			array('config.add', array('auto_posting_cron_task_interval_gc', 60)), 
 		);
 	}
 }

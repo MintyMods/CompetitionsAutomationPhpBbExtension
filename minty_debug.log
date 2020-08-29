@@ -1,0 +1,1674 @@
+
+
+====================================
+Log started, 28/08/2020 06:29:49
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.012156009674072s
+
+
+
+====================================
+Log started, 28/08/2020 06:29:56
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1598588989397_start_date => 2020-08-19 00:00
+1598588989397_end_date => 2020-08-28 00:00
+1598588989397_text => New event
+1598588989397_id => 1598588989397
+1598588989397_sponsor => MISC
+1598588989397_template => DEFAULT
+1598588989397_rules => DEFAULT
+1598588989397_prize => DEFAULT
+1598588989397_post_to => DEFAULT
+1598588989397_status => DEFAULT
+1598588989397_!nativeeditor_status => inserted
+ids => 1598588989397
+
+Row data [1598588989397]
+start_date => 2020-08-19 00:00
+end_date => 2020-08-28 00:00
+text => New event
+id => 1598588989397
+sponsor => MISC
+template => DEFAULT
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+status => DEFAULT
+!nativeeditor_status => inserted
+
+INSERT INTO phpbb_minty_competition_events(start_date,end_date,text) VALUES ('2020-08-19 00:00','2020-08-28 00:00','New event')
+
+Edit operation finished
+0 => action:inserted; sid:1598588989397; tid:7;
+
+Done in 0.018333911895752s
+
+
+
+====================================
+Log started, 28/08/2020 06:29:58
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+7_start_date => 2020-08-03 00:00
+7_end_date => 2020-08-12 00:00
+7_text => New event
+7_id => 7
+7_sponsor => MISC
+7_template => DEFAULT
+7_rules => DEFAULT
+7_prize => DEFAULT
+7_post_to => DEFAULT
+7_status => DEFAULT
+7_!nativeeditor_status => updated
+ids => 7
+
+Row data [7]
+start_date => 2020-08-03 00:00
+end_date => 2020-08-12 00:00
+text => New event
+id => 7
+sponsor => MISC
+template => DEFAULT
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+status => DEFAULT
+!nativeeditor_status => updated
+
+UPDATE phpbb_minty_competition_events SET start_date='2020-08-03 00:00',end_date='2020-08-12 00:00',text='New event' WHERE id='7'
+
+Edit operation finished
+0 => action:updated; sid:7; tid:7;
+
+Done in 0.018965005874634s
+
+
+
+====================================
+Log started, 28/08/2020 06:30:02
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0082402229309082s
+
+
+
+====================================
+Log started, 28/08/2020 07:09:54
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0083351135253906s
+
+
+
+====================================
+Log started, 28/08/2020 07:09:59
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+4_id => 4
+4_start_date => 2020-08-20 00:00
+4_end_date => 2020-08-22 00:00
+4_text => New event
+4_!nativeeditor_status => updated
+ids => 4
+
+Row data [4]
+id => 4
+start_date => 2020-08-20 00:00
+end_date => 2020-08-22 00:00
+text => New event
+!nativeeditor_status => updated
+
+UPDATE phpbb_minty_competition_events SET start_date='2020-08-20 00:00',end_date='2020-08-22 00:00',text='New event' WHERE id='4'
+
+Edit operation finished
+0 => action:updated; sid:4; tid:4;
+
+Done in 0.019562005996704s
+
+
+
+====================================
+Log started, 28/08/2020 07:10:02
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0091910362243652s
+
+
+
+====================================
+Log started, 29/08/2020 07:09:53
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.010558843612671s
+
+
+
+====================================
+Log started, 29/08/2020 07:09:57
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1598677793231_start_date => 2020-07-27 00:00
+1598677793231_end_date => 2020-08-01 00:00
+1598677793231_text => New event
+1598677793231_id => 1598677793231
+1598677793231_sponsor => MISC
+1598677793231_template => DEFAULT
+1598677793231_rules => DEFAULT
+1598677793231_prize => DEFAULT
+1598677793231_post_to => DEFAULT
+1598677793231_status => DEFAULT
+1598677793231_!nativeeditor_status => inserted
+ids => 1598677793231
+
+Row data [1598677793231]
+start_date => 2020-07-27 00:00
+end_date => 2020-08-01 00:00
+text => New event
+id => 1598677793231
+sponsor => MISC
+template => DEFAULT
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+status => DEFAULT
+!nativeeditor_status => inserted
+
+INSERT INTO phpbb_minty_competition_events(start_date,end_date,text) VALUES ('2020-07-27 00:00','2020-08-01 00:00','New event')
+
+Edit operation finished
+0 => action:inserted; sid:1598677793231; tid:1;
+
+Done in 0.017493963241577s
+
+
+
+====================================
+Log started, 29/08/2020 07:09:59
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0088560581207275s
+
+
+
+====================================
+Log started, 29/08/2020 07:10:00
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.016724109649658s
+
+
+
+====================================
+Log started, 29/08/2020 07:10:03
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1598677800735_start_date => 2020-08-05 00:00
+1598677800735_end_date => 2020-08-08 00:00
+1598677800735_text => New event
+1598677800735_id => 1598677800735
+1598677800735_sponsor => MISC
+1598677800735_template => DEFAULT
+1598677800735_rules => DEFAULT
+1598677800735_prize => DEFAULT
+1598677800735_post_to => DEFAULT
+1598677800735_status => DEFAULT
+1598677800735_!nativeeditor_status => inserted
+ids => 1598677800735
+
+Row data [1598677800735]
+start_date => 2020-08-05 00:00
+end_date => 2020-08-08 00:00
+text => New event
+id => 1598677800735
+sponsor => MISC
+template => DEFAULT
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+status => DEFAULT
+!nativeeditor_status => inserted
+
+INSERT INTO phpbb_minty_competition_events(start_date,end_date,text) VALUES ('2020-08-05 00:00','2020-08-08 00:00','New event')
+
+Edit operation finished
+0 => action:inserted; sid:1598677800735; tid:2;
+
+Done in 0.019834995269775s
+
+
+
+====================================
+Log started, 29/08/2020 07:10:06
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0089619159698486s
+
+
+
+====================================
+Log started, 29/08/2020 07:10:18
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1598677805928_start_date => 2020-08-03 00:00
+1598677805928_end_date => 2020-08-08 00:00
+1598677805928_text => New event
+1598677805928_id => 1598677805928
+1598677805928_sponsor => MISC
+1598677805928_template => DEFAULT
+1598677805928_rules => DEFAULT
+1598677805928_prize => DEFAULT
+1598677805928_post_to => DEFAULT
+1598677805928_status => DEFAULT
+1598677805928_!nativeeditor_status => inserted
+ids => 1598677805928
+
+Row data [1598677805928]
+start_date => 2020-08-03 00:00
+end_date => 2020-08-08 00:00
+text => New event
+id => 1598677805928
+sponsor => MISC
+template => DEFAULT
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+status => DEFAULT
+!nativeeditor_status => inserted
+
+INSERT INTO phpbb_minty_competition_events(start_date,end_date,text) VALUES ('2020-08-03 00:00','2020-08-08 00:00','New event')
+
+Edit operation finished
+0 => action:inserted; sid:1598677805928; tid:3;
+
+Done in 0.020057916641235s
+
+
+
+====================================
+Log started, 29/08/2020 07:10:46
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1598677805945_start_date => 2020-08-19 00:00
+1598677805945_end_date => 2020-08-22 00:00
+1598677805945_text => New event
+1598677805945_id => 1598677805945
+1598677805945_sponsor => MISC
+1598677805945_template => DEFAULT
+1598677805945_rules => DEFAULT
+1598677805945_prize => DEFAULT
+1598677805945_post_to => DEFAULT
+1598677805945_status => DEFAULT
+1598677805945_!nativeeditor_status => inserted
+ids => 1598677805945
+
+Row data [1598677805945]
+start_date => 2020-08-19 00:00
+end_date => 2020-08-22 00:00
+text => New event
+id => 1598677805945
+sponsor => MISC
+template => DEFAULT
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+status => DEFAULT
+!nativeeditor_status => inserted
+
+INSERT INTO phpbb_minty_competition_events(start_date,end_date,text) VALUES ('2020-08-19 00:00','2020-08-22 00:00','New event')
+
+Edit operation finished
+0 => action:inserted; sid:1598677805945; tid:4;
+
+Done in 0.020314931869507s
+
+
+
+====================================
+Log started, 29/08/2020 07:13:27
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0091309547424316s
+
+
+
+====================================
+Log started, 29/08/2020 07:22:31
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0086379051208496s
+
+
+
+====================================
+Log started, 29/08/2020 07:22:34
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1598678551323_start_date => 2020-08-04 00:00
+1598678551323_end_date => 2020-08-07 00:00
+1598678551323_text => New event
+1598678551323_id => 1598678551323
+1598678551323_sponsor => MISC
+1598678551323_template => DEFAULT
+1598678551323_rules => DEFAULT
+1598678551323_prize => DEFAULT
+1598678551323_post_to => DEFAULT
+1598678551323_status => DEFAULT
+1598678551323_!nativeeditor_status => inserted
+ids => 1598678551323
+
+Row data [1598678551323]
+start_date => 2020-08-04 00:00
+end_date => 2020-08-07 00:00
+text => New event
+id => 1598678551323
+sponsor => MISC
+template => DEFAULT
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+status => DEFAULT
+!nativeeditor_status => inserted
+
+INSERT INTO phpbb_minty_competition_events(start_date,end_date,text) VALUES ('2020-08-04 00:00','2020-08-07 00:00','New event')
+
+Edit operation finished
+0 => action:inserted; sid:1598678551323; tid:1;
+
+Done in 0.019205093383789s
+
+
+
+====================================
+Log started, 29/08/2020 07:22:35
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0092141628265381s
+
+
+
+====================================
+Log started, 29/08/2020 07:24:23
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1598678555655_start_date => 2020-08-04 00:00
+1598678555655_end_date => 2020-08-08 00:00
+1598678555655_text => New event
+1598678555655_id => 1598678555655
+1598678555655_sponsor => MISC
+1598678555655_template => DEFAULT
+1598678555655_rules => DEFAULT
+1598678555655_prize => DEFAULT
+1598678555655_post_to => DEFAULT
+1598678555655_status => DEFAULT
+1598678555655_!nativeeditor_status => inserted
+ids => 1598678555655
+
+Row data [1598678555655]
+start_date => 2020-08-04 00:00
+end_date => 2020-08-08 00:00
+text => New event
+id => 1598678555655
+sponsor => MISC
+template => DEFAULT
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+status => DEFAULT
+!nativeeditor_status => inserted
+
+INSERT INTO phpbb_minty_competition_events(start_date,end_date,text) VALUES ('2020-08-04 00:00','2020-08-08 00:00','New event')
+
+Edit operation finished
+0 => action:inserted; sid:1598678555655; tid:2;
+
+Done in 0.016953945159912s
+
+
+
+====================================
+Log started, 29/08/2020 07:24:25
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0088419914245605s
+
+
+
+====================================
+Log started, 29/08/2020 07:24:27
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1598678665564_start_date => 2020-07-27 00:00
+1598678665564_end_date => 2020-07-30 00:00
+1598678665564_text => New event
+1598678665564_id => 1598678665564
+1598678665564_sponsor => MISC
+1598678665564_template => DEFAULT
+1598678665564_rules => DEFAULT
+1598678665564_prize => DEFAULT
+1598678665564_post_to => DEFAULT
+1598678665564_status => DEFAULT
+1598678665564_!nativeeditor_status => inserted
+ids => 1598678665564
+
+Row data [1598678665564]
+start_date => 2020-07-27 00:00
+end_date => 2020-07-30 00:00
+text => New event
+id => 1598678665564
+sponsor => MISC
+template => DEFAULT
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+status => DEFAULT
+!nativeeditor_status => inserted
+
+INSERT INTO phpbb_minty_competition_events(start_date,end_date,text) VALUES ('2020-07-27 00:00','2020-07-30 00:00','New event')
+
+Edit operation finished
+0 => action:inserted; sid:1598678665564; tid:3;
+
+Done in 0.017433881759644s
+
+
+
+====================================
+Log started, 29/08/2020 07:24:29
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0087320804595947s
+
+
+
+====================================
+Log started, 29/08/2020 07:24:29
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.010705947875977s
+
+
+
+====================================
+Log started, 29/08/2020 07:35:22
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0087220668792725s
+
+
+
+====================================
+Log started, 29/08/2020 07:35:24
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1598679322042_start_date => 2020-08-03 00:00
+1598679322042_end_date => 2020-08-07 00:00
+1598679322042_text => New event
+1598679322042_id => 1598679322042
+1598679322042_sponsor => MISC
+1598679322042_template => DEFAULT
+1598679322042_rules => DEFAULT
+1598679322042_prize => DEFAULT
+1598679322042_post_to => DEFAULT
+1598679322042_status => DEFAULT
+1598679322042_!nativeeditor_status => inserted
+ids => 1598679322042
+
+Row data [1598679322042]
+start_date => 2020-08-03 00:00
+end_date => 2020-08-07 00:00
+text => New event
+id => 1598679322042
+sponsor => MISC
+template => DEFAULT
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+status => DEFAULT
+!nativeeditor_status => inserted
+
+INSERT INTO phpbb_minty_competition_events(start_date,end_date,text) VALUES ('2020-08-03 00:00','2020-08-07 00:00','New event')
+
+Edit operation finished
+0 => action:inserted; sid:1598679322042; tid:1;
+
+Done in 0.018239974975586s
+
+
+
+====================================
+Log started, 29/08/2020 07:35:25
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0086600780487061s
+
+
+
+====================================
+Log started, 29/08/2020 07:35:28
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1598679325790_start_date => 2020-07-28 00:00
+1598679325790_end_date => 2020-08-01 00:00
+1598679325790_text => New event
+1598679325790_id => 1598679325790
+1598679325790_sponsor => MISC
+1598679325790_template => DEFAULT
+1598679325790_rules => DEFAULT
+1598679325790_prize => DEFAULT
+1598679325790_post_to => DEFAULT
+1598679325790_status => DEFAULT
+1598679325790_!nativeeditor_status => inserted
+ids => 1598679325790
+
+Row data [1598679325790]
+start_date => 2020-07-28 00:00
+end_date => 2020-08-01 00:00
+text => New event
+id => 1598679325790
+sponsor => MISC
+template => DEFAULT
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+status => DEFAULT
+!nativeeditor_status => inserted
+
+INSERT INTO phpbb_minty_competition_events(start_date,end_date,text) VALUES ('2020-07-28 00:00','2020-08-01 00:00','New event')
+
+Edit operation finished
+0 => action:inserted; sid:1598679325790; tid:2;
+
+Done in 0.019123077392578s
+
+
+
+====================================
+Log started, 29/08/2020 07:35:30
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0089070796966553s
+
+
+
+====================================
+Log started, 29/08/2020 07:35:31
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1_id => 1
+1_start_date => 2020-08-20 00:00
+1_end_date => 2020-08-24 00:00
+1_text => New event
+1_!nativeeditor_status => updated
+ids => 1
+
+Row data [1]
+id => 1
+start_date => 2020-08-20 00:00
+end_date => 2020-08-24 00:00
+text => New event
+!nativeeditor_status => updated
+
+UPDATE phpbb_minty_competition_events SET start_date='2020-08-20 00:00',end_date='2020-08-24 00:00',text='New event' WHERE id='1'
+
+Edit operation finished
+0 => action:updated; sid:1; tid:1;
+
+Done in 0.01988410949707s
+
+
+
+====================================
+Log started, 29/08/2020 07:35:32
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1_id => 1
+1_start_date => 2020-08-05 00:00
+1_end_date => 2020-08-09 00:00
+1_text => New event
+1_!nativeeditor_status => updated
+ids => 1
+
+Row data [1]
+id => 1
+start_date => 2020-08-05 00:00
+end_date => 2020-08-09 00:00
+text => New event
+!nativeeditor_status => updated
+
+UPDATE phpbb_minty_competition_events SET start_date='2020-08-05 00:00',end_date='2020-08-09 00:00',text='New event' WHERE id='1'
+
+Edit operation finished
+0 => action:updated; sid:1; tid:1;
+
+Done in 0.020222902297974s
+
+
+
+====================================
+Log started, 29/08/2020 07:35:34
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0085511207580566s
+
+
+
+====================================
+Log started, 29/08/2020 07:35:35
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0088450908660889s
+
+
+
+====================================
+Log started, 29/08/2020 09:34:51
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.012120008468628s
+
+
+
+====================================
+Log started, 29/08/2020 09:34:53
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1_id => 1
+1_start_date => 2020-08-25 00:00
+1_end_date => 2020-08-29 00:00
+1_text => New event
+1_!nativeeditor_status => updated
+ids => 1
+
+Row data [1]
+id => 1
+start_date => 2020-08-25 00:00
+end_date => 2020-08-29 00:00
+text => New event
+!nativeeditor_status => updated
+
+UPDATE phpbb_minty_competition_events SET start_date='2020-08-25 00:00',end_date='2020-08-29 00:00',text='New event' WHERE id='1'
+
+Edit operation finished
+0 => action:updated; sid:1; tid:1;
+
+Done in 0.020589828491211s
+
+
+
+====================================
+Log started, 29/08/2020 09:34:54
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1_id => 1
+1_start_date => 2020-08-26 00:00
+1_end_date => 2020-08-30 00:00
+1_text => New event
+1_!nativeeditor_status => updated
+ids => 1
+
+Row data [1]
+id => 1
+start_date => 2020-08-26 00:00
+end_date => 2020-08-30 00:00
+text => New event
+!nativeeditor_status => updated
+
+UPDATE phpbb_minty_competition_events SET start_date='2020-08-26 00:00',end_date='2020-08-30 00:00',text='New event' WHERE id='1'
+
+Edit operation finished
+0 => action:updated; sid:1; tid:1;
+
+Done in 0.018785953521729s
+
+
+
+====================================
+Log started, 29/08/2020 11:47:08
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.018599033355713s
+
+
+
+====================================
+Log started, 29/08/2020 11:47:11
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1598694428656_start_date => 2020-08-04 00:00
+1598694428656_end_date => 2020-08-15 00:00
+1598694428656_text => New event
+1598694428656_id => 1598694428656
+1598694428656_sponsor => MISC
+1598694428656_template => DEFAULT
+1598694428656_rules => DEFAULT
+1598694428656_prize => DEFAULT
+1598694428656_post_to => DEFAULT
+1598694428656_status => DEFAULT
+1598694428656_!nativeeditor_status => inserted
+ids => 1598694428656
+
+Row data [1598694428656]
+start_date => 2020-08-04 00:00
+end_date => 2020-08-15 00:00
+text => New event
+id => 1598694428656
+sponsor => MISC
+template => DEFAULT
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+status => DEFAULT
+!nativeeditor_status => inserted
+
+INSERT INTO phpbb_minty_competition_events(start_date,end_date,text) VALUES ('2020-08-04 00:00','2020-08-15 00:00','New event')
+
+Edit operation finished
+0 => action:inserted; sid:1598694428656; tid:3;
+
+Done in 0.018877029418945s
+
+
+
+====================================
+Log started, 29/08/2020 11:47:15
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0089211463928223s
+
+
+
+====================================
+Log started, 29/08/2020 12:14:25
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0087060928344727s
+
+
+
+====================================
+Log started, 29/08/2020 12:14:29
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1598696065794_start_date => 2020-07-27 00:00
+1598696065794_end_date => 2020-08-01 00:00
+1598696065794_text => New event
+1598696065794_id => 1598696065794
+1598696065794_sponsor => MISC
+1598696065794_template => DEFAULT
+1598696065794_rules => DEFAULT
+1598696065794_prize => DEFAULT
+1598696065794_post_to => DEFAULT
+1598696065794_status => DEFAULT
+1598696065794_!nativeeditor_status => inserted
+ids => 1598696065794
+
+Row data [1598696065794]
+start_date => 2020-07-27 00:00
+end_date => 2020-08-01 00:00
+text => New event
+id => 1598696065794
+sponsor => MISC
+template => DEFAULT
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+status => DEFAULT
+!nativeeditor_status => inserted
+
+INSERT INTO phpbb_minty_competition_events(start_date,end_date,text) VALUES ('2020-07-27 00:00','2020-08-01 00:00','New event')
+
+Edit operation finished
+0 => action:inserted; sid:1598696065794; tid:1;
+
+Done in 0.019052982330322s
+
+
+
+====================================
+Log started, 29/08/2020 12:14:30
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1598696065811_start_date => 2020-08-12 00:00
+1598696065811_end_date => 2020-08-22 00:00
+1598696065811_text => New event
+1598696065811_id => 1598696065811
+1598696065811_sponsor => MISC
+1598696065811_template => DEFAULT
+1598696065811_rules => DEFAULT
+1598696065811_prize => DEFAULT
+1598696065811_post_to => DEFAULT
+1598696065811_status => DEFAULT
+1598696065811_!nativeeditor_status => inserted
+ids => 1598696065811
+
+Row data [1598696065811]
+start_date => 2020-08-12 00:00
+end_date => 2020-08-22 00:00
+text => New event
+id => 1598696065811
+sponsor => MISC
+template => DEFAULT
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+status => DEFAULT
+!nativeeditor_status => inserted
+
+INSERT INTO phpbb_minty_competition_events(start_date,end_date,text) VALUES ('2020-08-12 00:00','2020-08-22 00:00','New event')
+
+Edit operation finished
+0 => action:inserted; sid:1598696065811; tid:2;
+
+Done in 0.018826961517334s
+
+
+
+====================================
+Log started, 29/08/2020 12:14:32
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1598696065812_start_date => 2020-09-02 00:00
+1598696065812_end_date => 2020-09-04 00:00
+1598696065812_text => New event
+1598696065812_id => 1598696065812
+1598696065812_sponsor => MISC
+1598696065812_template => DEFAULT
+1598696065812_rules => DEFAULT
+1598696065812_prize => DEFAULT
+1598696065812_post_to => DEFAULT
+1598696065812_status => DEFAULT
+1598696065812_!nativeeditor_status => inserted
+ids => 1598696065812
+
+Row data [1598696065812]
+start_date => 2020-09-02 00:00
+end_date => 2020-09-04 00:00
+text => New event
+id => 1598696065812
+sponsor => MISC
+template => DEFAULT
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+status => DEFAULT
+!nativeeditor_status => inserted
+
+INSERT INTO phpbb_minty_competition_events(start_date,end_date,text) VALUES ('2020-09-02 00:00','2020-09-04 00:00','New event')
+
+Edit operation finished
+0 => action:inserted; sid:1598696065812; tid:3;
+
+Done in 0.019077062606812s
+
+
+
+====================================
+Log started, 29/08/2020 12:14:35
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0089879035949707s
+
+
+
+====================================
+Log started, 29/08/2020 12:39:21
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1598696075231_start_date => 2020-08-03 00:00
+1598696075231_end_date => 2020-08-06 00:00
+1598696075231_text => New event
+1598696075231_id => 1598696075231
+1598696075231_sponsor => MISC
+1598696075231_template => DEFAULT
+1598696075231_rules => DEFAULT
+1598696075231_prize => DEFAULT
+1598696075231_post_to => DEFAULT
+1598696075231_status => DEFAULT
+1598696075231_!nativeeditor_status => inserted
+ids => 1598696075231
+
+Row data [1598696075231]
+start_date => 2020-08-03 00:00
+end_date => 2020-08-06 00:00
+text => New event
+id => 1598696075231
+sponsor => MISC
+template => DEFAULT
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+status => DEFAULT
+!nativeeditor_status => inserted
+
+INSERT INTO phpbb_minty_competition_events(start_date,end_date,text) VALUES ('2020-08-03 00:00','2020-08-06 00:00','New event')
+
+Edit operation finished
+0 => action:inserted; sid:1598696075231; tid:1;
+
+Done in 0.021151065826416s
+
+
+
+====================================
+Log started, 29/08/2020 12:39:22
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0092339515686035s
+
+
+
+====================================
+Log started, 29/08/2020 12:39:24
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1_id => 1
+1_start_date => 2020-08-21 00:00
+1_end_date => 2020-08-24 00:00
+1_text => New event
+1_!nativeeditor_status => updated
+ids => 1
+
+Row data [1]
+id => 1
+start_date => 2020-08-21 00:00
+end_date => 2020-08-24 00:00
+text => New event
+!nativeeditor_status => updated
+
+UPDATE phpbb_minty_competition_events SET start_date='2020-08-21 00:00',end_date='2020-08-24 00:00',text='New event' WHERE id='1'
+
+Edit operation finished
+0 => action:updated; sid:1; tid:1;
+
+Done in 0.019335031509399s
+
+
+
+====================================
+Log started, 29/08/2020 12:39:25
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1_id => 1
+1_start_date => 2020-08-27 00:00
+1_end_date => 2020-08-30 00:00
+1_text => New event
+1_!nativeeditor_status => updated
+ids => 1
+
+Row data [1]
+id => 1
+start_date => 2020-08-27 00:00
+end_date => 2020-08-30 00:00
+text => New event
+!nativeeditor_status => updated
+
+UPDATE phpbb_minty_competition_events SET start_date='2020-08-27 00:00',end_date='2020-08-30 00:00',text='New event' WHERE id='1'
+
+Edit operation finished
+0 => action:updated; sid:1; tid:1;
+
+Done in 0.018862009048462s
+
+
+
+====================================
+Log started, 29/08/2020 12:39:27
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1598697562443_start_date => 2020-08-28 00:00
+1598697562443_end_date => 2020-08-29 00:00
+1598697562443_text => New event
+1598697562443_id => 1598697562443
+1598697562443_sponsor => MISC
+1598697562443_template => DEFAULT
+1598697562443_rules => DEFAULT
+1598697562443_prize => DEFAULT
+1598697562443_post_to => DEFAULT
+1598697562443_status => DEFAULT
+1598697562443_!nativeeditor_status => inserted
+ids => 1598697562443
+
+Row data [1598697562443]
+start_date => 2020-08-28 00:00
+end_date => 2020-08-29 00:00
+text => New event
+id => 1598697562443
+sponsor => MISC
+template => DEFAULT
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+status => DEFAULT
+!nativeeditor_status => inserted
+
+INSERT INTO phpbb_minty_competition_events(start_date,end_date,text) VALUES ('2020-08-28 00:00','2020-08-29 00:00','New event')
+
+Edit operation finished
+0 => action:inserted; sid:1598697562443; tid:2;
+
+Done in 0.018909931182861s
+
+
+
+====================================
+Log started, 29/08/2020 12:53:53
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0099170207977295s
+
+
+
+====================================
+Log started, 29/08/2020 12:55:51
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.010623931884766s
+
+
+
+====================================
+Log started, 29/08/2020 12:55:54
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.008997917175293s
+
+
+
+====================================
+Log started, 29/08/2020 01:00:37
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.017606019973755s
+
+
+
+====================================
+Log started, 29/08/2020 01:02:07
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0090241432189941s
+
+
+
+====================================
+Log started, 29/08/2020 01:04:07
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0091249942779541s
+
+
+
+====================================
+Log started, 29/08/2020 01:04:09
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0093948841094971s
+
+
+
+====================================
+Log started, 29/08/2020 01:04:10
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0091099739074707s
+
+
+
+====================================
+Log started, 29/08/2020 01:04:12
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1598699050497_start_date => 2020-07-27 00:00
+1598699050497_end_date => 2020-08-06 00:00
+1598699050497_text => New event
+1598699050497_id => 1598699050497
+1598699050497_sponsor => MISC
+1598699050497_template => DEFAULT
+1598699050497_rules => DEFAULT
+1598699050497_prize => DEFAULT
+1598699050497_post_to => DEFAULT
+1598699050497_status => DEFAULT
+1598699050497_!nativeeditor_status => inserted
+ids => 1598699050497
+
+Row data [1598699050497]
+start_date => 2020-07-27 00:00
+end_date => 2020-08-06 00:00
+text => New event
+id => 1598699050497
+sponsor => MISC
+template => DEFAULT
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+status => DEFAULT
+!nativeeditor_status => inserted
+
+INSERT INTO phpbb_minty_competition_events(start_date,end_date,text) VALUES ('2020-07-27 00:00','2020-08-06 00:00','New event')
+
+Edit operation finished
+0 => action:inserted; sid:1598699050497; tid:3;
+
+Done in 0.020273923873901s
+
+
+
+====================================
+Log started, 29/08/2020 01:13:16
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.010444164276123s
+
+
+
+====================================
+Log started, 29/08/2020 01:13:23
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.008897066116333s
+
+
+
+====================================
+Log started, 29/08/2020 01:13:29
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1598699603386_start_date => 2020-08-11 00:00
+1598699603386_end_date => 2020-08-15 00:00
+1598699603386_text => New event
+1598699603386_id => 1598699603386
+1598699603386_sponsor => VCSS
+1598699603386_template => DEFAULT
+1598699603386_rules => DEFAULT
+1598699603386_prize => DEFAULT
+1598699603386_post_to => DEFAULT
+1598699603386_status => DEFAULT
+1598699603386_!nativeeditor_status => inserted
+ids => 1598699603386
+
+Row data [1598699603386]
+start_date => 2020-08-11 00:00
+end_date => 2020-08-15 00:00
+text => New event
+id => 1598699603386
+sponsor => VCSS
+template => DEFAULT
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+status => DEFAULT
+!nativeeditor_status => inserted
+
+INSERT INTO phpbb_minty_competition_events(start_date,end_date,text) VALUES ('2020-08-11 00:00','2020-08-15 00:00','New event')
+
+Edit operation finished
+0 => action:inserted; sid:1598699603386; tid:4;
+
+Done in 0.018455028533936s
+
+
+
+====================================
+Log started, 29/08/2020 01:14:47
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.010852098464966s
+
+
+
+====================================
+Log started, 29/08/2020 01:14:50
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+4_id => 4
+4_start_date => 2020-08-27 00:00
+4_end_date => 2020-08-31 00:00
+4_text => New event
+4_!nativeeditor_status => updated
+ids => 4
+
+Row data [4]
+id => 4
+start_date => 2020-08-27 00:00
+end_date => 2020-08-31 00:00
+text => New event
+!nativeeditor_status => updated
+
+UPDATE phpbb_minty_competition_events SET start_date='2020-08-27 00:00',end_date='2020-08-31 00:00',text='New event' WHERE id='4'
+
+Edit operation finished
+0 => action:updated; sid:4; tid:4;
+
+Done in 0.01919412612915s
+
+
+
+====================================
+Log started, 29/08/2020 01:14:53
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0089569091796875s
+
+
+
+====================================
+Log started, 29/08/2020 01:18:34
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0093441009521484s
+
+
+
+====================================
+Log started, 29/08/2020 01:19:25
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.01042914390564s
+
+
+
+====================================
+Log started, 29/08/2020 01:40:01
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.012433052062988s
+
+
+
+====================================
+Log started, 29/08/2020 01:40:05
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+1598701201611_start_date => 2020-08-11 00:00
+1598701201611_end_date => 2020-08-16 00:00
+1598701201611_text => New event
+1598701201611_id => 1598701201611
+1598701201611_sponsor => MISC
+1598701201611_template => DEFAULT
+1598701201611_rules => DEFAULT
+1598701201611_prize => DEFAULT
+1598701201611_post_to => DEFAULT
+1598701201611_status => DEFAULT
+1598701201611_!nativeeditor_status => inserted
+ids => 1598701201611
+
+Row data [1598701201611]
+start_date => 2020-08-11 00:00
+end_date => 2020-08-16 00:00
+text => New event
+id => 1598701201611
+sponsor => MISC
+template => DEFAULT
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+status => DEFAULT
+!nativeeditor_status => inserted
+
+INSERT INTO phpbb_minty_competition_events(start_date,end_date,text) VALUES ('2020-08-11 00:00','2020-08-16 00:00','New event')
+
+Edit operation finished
+0 => action:inserted; sid:1598701201611; tid:5;
+
+Done in 0.018355131149292s
+
+
+
+====================================
+Log started, 29/08/2020 01:40:08
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0091500282287598s
+
+
+
+====================================
+Log started, 29/08/2020 01:40:09
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+5_id => 5
+5_start_date => 2020-08-19 00:00
+5_end_date => 2020-08-24 00:00
+5_text => New event
+5_!nativeeditor_status => updated
+ids => 5
+
+Row data [5]
+id => 5
+start_date => 2020-08-19 00:00
+end_date => 2020-08-24 00:00
+text => New event
+!nativeeditor_status => updated
+
+UPDATE phpbb_minty_competition_events SET start_date='2020-08-19 00:00',end_date='2020-08-24 00:00',text='New event' WHERE id='5'
+
+Edit operation finished
+0 => action:updated; sid:5; tid:5;
+
+Done in 0.023104906082153s
+
+
+
+====================================
+Log started, 29/08/2020 01:40:11
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.012745141983032s
+
+
+
+====================================
+Log started, 29/08/2020 01:42:35
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0089659690856934s
+
+
+
+====================================
+Log started, 29/08/2020 03:28:09
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.008965015411377s
+
+
+
+====================================
+Log started, 29/08/2020 03:28:11
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0091087818145752s
+
+
+
+====================================
+Log started, 29/08/2020 04:08:07
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0089030265808105s
+
+
+
+====================================
+Log started, 29/08/2020 04:14:43
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text FROM phpbb_minty_competition_events
+
+Done in 0.0087618827819824s
+

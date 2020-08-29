@@ -168,42 +168,4 @@ class main_controller
 		return $this->helper->render('@minty_competitions/competitions_body.html', $name);
 	}
 
-		// create a new event
-	function create($db, $event){
-		$queryText = "INSERT INTO ' . $this->table_name . ' SET
-			`start_date`=?,
-			`end_date`=?,
-			`text`=?";
-		$queryParams = [
-			$event["start_date"],
-			$event["end_date"],
-			$event["text"]
-		];
-		$query = $db->prepare($queryText);
-		$query->execute($queryParams);
-		return $db->lastInsertId();
-	}
-	// update an event
-	function update($db, $event, $id){
-		$queryText = "UPDATE ' . $this->table_name . ' SET
-			`start_date`=?,
-			`end_date`=?,
-			`text`=?
-			WHERE `id`=?";
-		$queryParams = [
-			$event["start_date"],
-			$event["end_date"],
-			$event["text"],
-			$id
-		];
-		$query = $db->prepare($queryText);
-		$query->execute($queryParams);
-	}
-	// delete an event
-	function delete($db, $id){
-		$queryText = "DELETE FROM ' . $this->table_name . ' WHERE `id`=? ;";
-		$query = $db->prepare($queryText);
-		$query->execute([$id]);
-	}
-
 }

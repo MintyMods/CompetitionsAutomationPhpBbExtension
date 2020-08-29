@@ -26,8 +26,10 @@ class main_listener implements EventSubscriberInterface
 			'core.user_setup'							=> 'load_language_on_setup',
 			'core.page_header'							=> 'add_page_header_link',
 			'core.viewonline_overwrite_location'		=> 'viewonline_page',
-	'core.display_forums_modify_template_vars'	=> 'display_forums_modify_template_vars',
+			'core.display_forums_modify_template_vars'	=> 'display_forums_modify_template_vars',
 			'core.permissions'	=> 'add_permissions',
+			'boardtools.cronstatus.modify_cron_task'   => 'add_my_cron_task',
+			'boardtools.cronstatus.modify_cron_config'   => 'modify_cronlock',			
 		);
 	}
 
@@ -51,13 +53,45 @@ class main_listener implements EventSubscriberInterface
 	 * @param \phpbb\template\template	$template	Template object
 	 * @param string                    $php_ext    phpEx
 	 */
-	public function __construct(\phpbb\language\language $language, \phpbb\controller\helper $helper, \phpbb\template\template $template, $php_ext)
-	{
+	public function __construct(\phpbb\language\language $language, \phpbb\controller\helper $helper, \phpbb\template\template $template, $php_ext) {
 		$this->language = $language;
 		$this->helper   = $helper;
 		$this->template = $template;
 		$this->php_ext  = $php_ext;
 	}
+
+
+	public function add_my_cron_task($event) {
+	   if ($event['task_name'] === 'minty.competitions.cron.task.auto_posting_cron_task') {
+		  $last_task_date = $this->config['auto_posting_cron_task_last_gc'];
+		  $task_interval = $this->config['auto_posting_cron_task_interval_gc'];
+		  $event['task_date'] = $last_task_date;
+		  $event['new_task_date'] = $last_task_date + $task_interval;
+	   }
+	}
+ 
+	public function modify_cronlock($event) {
+	   $last_task_date = $this->config['auto_posting_cron_task_last_gc'];
+	   if (isset($event['last_task_date']))  {
+		  if ($last_task_date >= $event['last_task_date']) {
+			 $event['cronlock'] = 'auto_posting_cron_task';
+			 $event['last_task_date'] = $last_task_date;
+		  }
+	   }
+	   // Workaround for Cron Status 3.1.1.
+	   // The maximum value for the date of the cronlock is not passed to the event object.
+	   // We need to find it again.
+	   else if ($last_task_date >= $this->phpbb_container->get('boardtools.cronstatus.listener')->maxValueInArray($event['rows'], 'config_value')) {
+		  $event['cronlock'] = 'auto_posting_cron_task'; 
+		  $rows = $event['rows'];
+		  $rows[] = array(
+			 "config_name"   => "auto_posting_cron_task_last_gc", // Any name ending with '_last_gc'.
+			 "config_value"   => $last_task_date
+		  );
+		  $event['rows'] = $rows;
+	   }
+	}
+
 
 	/**
 	 * Load common language files during user setup

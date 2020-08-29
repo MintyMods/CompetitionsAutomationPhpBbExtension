@@ -47,10 +47,10 @@ class install_sample_schema extends \phpbb\db\migration\migration
 			'add_tables'		=> array(
 				$this->table_prefix . 'minty_competition_events'	=> array(
 					'COLUMNS'			=> array(
-						'id'			=> array('UINT', NULL),
-						'text'			=> array('VCHAR:2046', ''),
-						'start_date'	=> array('TIMESTAMP'),
-						'end_date'		=> array('TIMESTAMP'),
+						'id'			=> array('UINT', null, 'auto_increment'),
+						'text'			=> array('MTEXT', ''),
+						'start_date'	=> array('VCHAR:10', ''),
+						'end_date'		=> array('VCHAR:10', ''),
 						'sponsor'		=> array('UINT',0),
 						'template'		=> array('UINT',0),
 						'rules'			=> array('UINT',0),
@@ -58,7 +58,8 @@ class install_sample_schema extends \phpbb\db\migration\migration
 						'created_by'	=> array('UINT',0),
 						'won_by'		=> array('UINT',0),
 						'post_to'		=> array('UINT',0),
-						'status'		=> array('UINT',0),
+						'status'		=> array('VCHAR:20', ''),
+						'posted'    	=> array('BOOL', 0)
 					),
 					'PRIMARY_KEY'	=> 'id',
 				),
