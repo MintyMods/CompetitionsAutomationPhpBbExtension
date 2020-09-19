@@ -41,6 +41,9 @@ class main_controller
 	/** @var \phpbb\db\driver\factory */
 	protected $db;
 
+	/** @var \phpbb\log\log */
+	protected $log;
+
 	protected $log_file = "H:/Development/XAMPP/apps/phpbb/htdocs/ext/minty/competitions/minty_debug.log";
 
 	protected $table_name = "phpbb_minty_competition_events";
@@ -61,7 +64,8 @@ class main_controller
 								\phpbb\auth\auth $auth, 
 								\phpbb\user $user, 
 								\phpbb\request\request $request, 
-								\phpbb\db\driver\factory $dbal) {
+								\phpbb\db\driver\factory $dbal,
+								\phpbb\log\log $log) {
 		$this->config	= $config;
 		$this->helper	= $helper;
 		$this->template	= $template;
@@ -70,6 +74,7 @@ class main_controller
 		$this->user = $user;
 		$this->request = $request;
 		$this->db = $dbal;
+		$this->log		= $log;
 	}
 
 	
@@ -81,51 +86,45 @@ class main_controller
 	 * @return \Symfony\Component\HttpFoundation\Response A Symfony Response object
 	 */
 	public function handle($name) {
-		//$user_id = request_var('user_id', $user->data['user_id']);
 		$this->request->enable_super_globals();
-		
 		// var_dump($_SERVER["REQUEST_METHOD"]);
-		if ($name != 'automation') {
-			// header("Content-Type: application/json");
+		if ($name == 'sponsors') {
+			$this->getSponsors($name); 
+		} else if ($name == 'templates') {
+			$this->getSponsorTemplates($name); 
+		} else if ($name == 'automation') {
+			 return $this->helper->render('@minty_competitions/competitions_body.html', $name);
+		} else  {
 			switch ($_SERVER["REQUEST_METHOD"]) {
 				case "GET":
-					return $this->getData(); 	
-					// $result = read($db, $_GET);
+					$this->getData(); 	
 				break;
 				case "POST":
-					
-					// $requestPayload = json_decode(file_get_contents("php://input")); 
-					// var_dump($requestPayload);
-					// $id = $requestPayload->id; 
-					// $action = $requestPayload->action; 
-					// $body = (array) $requestPayload->data; 
-					// $result = [ 
-					// 	"action" => $action 
-					// ]; 
-					// if ($action == "inserted") {; 
-					// 	$databaseId = create($db, $body); 
-					// 	$result["tid"] = $databaseId; 
-					// } elseif($action == "updated") { 
-					// 	update($db, $body, $id); 
-					// } elseif($action == "deleted") { 
-					// 	delete($db, $id); 
-					// } 
-
-
-					return $this->getData();
-					// we'll implement this later
+					$this->getData();
 				break;
 				default: 
 					throw new Exception("Unexpected Method"); 
 				break;
 			}
-			// echo json_encode($result);
-
 		}
-		return $this->getTopics($name); 
+		return $this->helper->render('@minty_competitions/competitions_body.html', $name);
 	}
-	
-	
+
+	function getSponsorTemplates() {
+		$sponsor_id = request_var('sponsor_id', 0);
+		$sponsor_list = array();
+		$sql = 'SELECT forum_id, forum_name FROM ' . FORUMS_TABLE . ' WHERE parent_id = ' . $sponsor_id;
+		$result = $this->db->sql_query($sql);
+		while ($row = $this->db->sql_fetchrow($result))	{
+			$sponsor_list[] = array(
+				'key'		=> (int) $row['forum_id'],
+				'label'		=> $row['forum_name'],
+			);
+		}
+		$this->db->sql_freeresult($result);
+		$json_response = new \phpbb\json_response();
+		$json_response->send($sponsor_list);
+	}
 	
 	function getData() {
 		require("./config.php"); 
@@ -138,34 +137,24 @@ class main_controller
 		$connector = new SchedulerConnector($res);
 		$connector->enable_log($this->log_file);
 		LogMaster::log("Minty Competition Logging Enabled");
-		$connector->render_table($this->table_name,"id","start_date,end_date,text");
-		return $this->helper->render('@minty_competitions/test_body.html', 'test');
+		$connector->render_table($this->table_name,"id","start_date,end_date,text,sponsor,status");
 	}
 
 
-	function getTopics($name) {
-
-		$l_message = !$this->config['minty_competitions_goodbye'] ? 'COMPETITIONS_HELLO' : 'COMPETITIONS_GOODBYE';
-		$this->template->assign_var('COMPETITIONS_MESSAGE', $this->language->lang($l_message, $name));
-
-		$topics = 'SELECT * FROM ' . TOPICS_TABLE . ' WHERE forum_id = 2';
-		$topics_result = $this->db->sql_query($topics);
-
-		while( $topics_row = $this->db->sql_fetchrow($topics_result) ) {
-			$topic_title       = $topics_row['topic_title'];
-			$topic_last_post    = append_sid("{$phpbb_root_path}viewtopic.$phpEx", 'f=' . $topics_row['forum_id'] . '&amp;t=' . $topics_row['topic_id'] . '&amp;p=' . $topics_row['topic_last_post_id']) . '#p' . $topics_row['topic_last_post_id'];
-			$topic_last_author    = get_username_string('full', $topics_row['topic_last_poster_id'], $topics_row['topic_last_poster_name'], $topics_row['topic_last_poster_colour']);
-			$topic_link       = append_sid("{$phpbb_root_path}viewtopic.$phpEx", 'f=' . $topics_row['forum_id'] . '&amp;t=' . $topics_row['topic_id']);
-
-			$this->template->assign_block_vars('topics', array(
-			'TOPIC_TITLE'       => censor_text($topic_title),
-			'TOPIC_LAST_POST'    => $topic_last_post,
-			'TOPIC_LAST_AUTHOR' => $topic_last_author,
-			'TOPIC_LINK'       => $topic_link,
-			));
-
+	function getSponsors($name) {
+		$parent_id = $this->config['minty_sponsor_forum'];
+		$sponsor_list = array();
+		$sql = 'SELECT forum_id, forum_name FROM ' . FORUMS_TABLE . ' WHERE parent_id = ' . $parent_id . '  and forum_name LIKE "%SPONSOR -%"';
+		$result = $this->db->sql_query($sql);
+		while ($row = $this->db->sql_fetchrow($result))	{
+			$sponsor_list[] = array(
+				'key'		=> (int) $row['forum_id'],
+				'label'		=> $row['forum_name'],
+			);
 		}
-		return $this->helper->render('@minty_competitions/competitions_body.html', $name);
+		$this->db->sql_freeresult($result);
+		$json_response = new \phpbb\json_response();
+		$json_response->send($sponsor_list);
 	}
 
 }

@@ -34,8 +34,8 @@ class auto_posting_cron_task extends \phpbb\cron\task\base
 	* @param \phpbb\log\log $log The phpBB log system
 	* @param \phpbb\db\driver\driver_interface $db The db connection
 	*/
-	public function __construct( \phpbb\config\config $config, \phpbb\user $user, \phpbb\log\log $log, \phpbb\db\driver\factory $dbal, \phpbb\auth\auth $auth, $phpbb_root_path, $php_ext)
-	{
+	public function __construct( \phpbb\config\config $config, \phpbb\user $user, \phpbb\log\log $log, \phpbb\db\driver\factory $dbal, \phpbb\auth\auth $auth, $phpbb_root_path, $php_ext) {
+		include_once($phpbb_root_path . 'includes/functions_posting.' . $php_ext);
 		$this->config = $config;
 		$this->user = $user;
 		$this->log = $log;
@@ -43,8 +43,6 @@ class auto_posting_cron_task extends \phpbb\cron\task\base
 		$this->auth = $auth;
 		$this->phpbb_root_path = $phpbb_root_path;
 		$this->php_ext = $php_ext;
-		include_once($phpbb_root_path . 'includes/functions_posting.' . $php_ext);
-		$this->run();
 	}
 	
 	/**
@@ -58,7 +56,8 @@ class auto_posting_cron_task extends \phpbb\cron\task\base
 	}
 
 	public function getFormattedTimeNow() {
-		return date("Y-m-d");
+		date_default_timezone_set('Europe/London');
+		return date("Y-m-d H:i");
 	}
 
 	public function postScheduledCompetition() {
@@ -73,19 +72,21 @@ class auto_posting_cron_task extends \phpbb\cron\task\base
 			$text = $row['text'];
 			$start_date = $row['start_date'];
 			$end_date = $row['end_date'];
-			$sponsor = $row['sponsor'];
-			$template = $row['template'];
-			$rules = $row['rules'];
-			$prize = $row['prize'];
-			$created_by = $row['created_by'];
 			$won_by = $row['won_by'];
 			$post_to = $row['post_to'];
 			$status = $row['status'];
 			$posted = $row['posted'];
-
-			$this->postCompetition($text, $text, $created_by);
+			$subject = 'SUBJECT: ' . $text;
+			$body = $this->buildPostBody($row['text'], $row['sponsor'], $row['template'], $row['rules'], $row['prize'], $row['created_by']);
+			$this->postCompetition($subject, $body, $created_by, $post_to);
 			$this->updateCompetitionStatus($id, 'POSTED');
 		}		
+	}
+
+	public function buildPostBody($text, $sponsor, $template, $rules, $prize, $created_by) {
+		$body = '';
+
+		return $text . $sponsor;
 	}
 
 	public function updateCompetitionStatus($id, $status) {
@@ -94,7 +95,7 @@ class auto_posting_cron_task extends \phpbb\cron\task\base
 		$this->db->sql_query($sql);
 	}
 
-	public function postCompetition($subject, $text, $created_by) {
+	public function postCompetition($subject, $text, $created_by, $post_to) {
 		$poll = $uid = $bitfield = $options = ''; 
 		
 		generate_text_for_storage($subject, $uid, $bitfield, $options, false, false, false);
@@ -122,6 +123,9 @@ class auto_posting_cron_task extends \phpbb\cron\task\base
 			'post_time'         => 0,
 			'forum_name'        => '',
 			'enable_indexing'   => true,
+			'topic_first_poster_name' => "AutoBot",
+			'force_approved_state' => true,        //3.1
+			'force_visibility' => true,            //3.0
 		);
 		
 		// $user->data['user_id'] = $created_by; 
@@ -142,8 +146,7 @@ class auto_posting_cron_task extends \phpbb\cron\task\base
 	 *
 	 * @return bool
 	 */
-	public function is_runnable()
-	{
+	public function is_runnable() {
 		return true;
 	}
 	
@@ -153,21 +156,17 @@ class auto_posting_cron_task extends \phpbb\cron\task\base
 	 *
 	 * @return bool
 	 */
-	public function should_run()
-	{
-		return true;
-		//eturn ($this->config['auto_posting_cron_task_last_gc'] < time() - $this->config['auto_posting_cron_task_interval_gc']);
+	public function should_run() {
+		return ($this->config['auto_posting_cron_task_last_gc'] < time() - $this->config['auto_posting_cron_task_interval_gc']);
 	}
 
-	public function error($message)
-	{
+	public function error($message) {
 		$user_id = empty($this->user->data) ? ANONYMOUS : $this->user->data['user_id'];
 		$user_ip = empty($this->user->ip) ? '' : $this->user->ip;
 		$this->log->add('critical', $user_id, $user_ip, 'LOG_MINTY_ERROR', false, array($message));
 	}
 	
-	public function info($message)
-	{
+	public function info($message) {
 		$user_id = empty($this->user->data) ? ANONYMOUS : $this->user->data['user_id'];
 		$user_ip = empty($this->user->ip) ? '' : $this->user->ip;
 		$this->log->add('admin', $user_id, $user_ip, 'LOG_MINTY_INFO', false, array($message));

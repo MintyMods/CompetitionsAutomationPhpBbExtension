@@ -48,9 +48,12 @@ class install_sample_data extends \phpbb\db\migration\migration
 	public function update_data()
 	{
 		return array(
+
+
 			// Add new config table settings
-			array('config.add', array('minty_competitions_sample_int', 0)),
-			array('config.add', array('minty_competitions_sample_str', '')),
+			array('config.add', array('minty_sponsor_forum', 0)),
+			array('config.add', array('minty_rule_forum', 0)),
+			array('config.add', array('minty_prize_forum', 0)),
 
 			// Add a new config_text table setting
 			array('config_text.add', array('minty_competitions_sample', '')),

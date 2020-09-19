@@ -49,8 +49,8 @@ class install_sample_schema extends \phpbb\db\migration\migration
 					'COLUMNS'			=> array(
 						'id'			=> array('UINT', null, 'auto_increment'),
 						'text'			=> array('MTEXT', ''),
-						'start_date'	=> array('VCHAR:10', ''),
-						'end_date'		=> array('VCHAR:10', ''),
+						'start_date'	=> array('VCHAR:30', ''),
+						'end_date'		=> array('VCHAR:30', ''),
 						'sponsor'		=> array('UINT',0),
 						'template'		=> array('UINT',0),
 						'rules'			=> array('UINT',0),

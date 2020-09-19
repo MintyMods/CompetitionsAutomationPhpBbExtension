@@ -35,17 +35,16 @@ if (empty($lang) || !is_array($lang))
 //
 
 $lang = array_merge($lang, array(
-
-	'COMPETITIONS_HELLO'		=> 'Hello %s!',
+	'SPONSOR_FORUM_SELECT'	=> 'Sponsor Templates',
+	'RULE_FORUM_SELECT'	=> 'Rules Templates',
+	'PRIZE_FORUM_SELECT'	=> 'Prize Templates',
+	'SPONSOR_FORUM_DESC'	=> 'Select the forum containing the template posts for Sponsors e.g. Posts starting with SPONSOR',
+	'RULE_FORUM_DESC'	=> 'Select the forum containing the template posts for Rules e.g. Posts starting with RULE',
+	'PRIZE_FORUM_DESC'	=> 'Select the forum containing the template posts for Prizes e.g. Posts starting with PRIZE',
 	'COMPETITIONS_GOODBYE'		=> 'Goodbye %s!',
-
-	'COMPETITIONS_EVENT'		=> ' :: Competitions Event :: ',
-
-	'ACP_COMPETITIONS_GOODBYE'			=> 'Should say goodbye?',
+	'ACP_COMPETITIONS_GOODBYE'			=> 'Test',
 	'ACP_COMPETITIONS_SETTING_SAVED'	=> 'Settings have been saved successfully!',
-
 	'MINTY_COMPETITIONS_NOTIFICATION'	=> 'Minty Competition Automation notification',
-
 	'COMPETITIONS_PAGE'			=> 'Competitions',
 	'VIEWING_MINTY_COMPETITIONS'			=> 'Viewing Minty Competition Automation',
 

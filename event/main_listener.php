@@ -25,8 +25,6 @@ class main_listener implements EventSubscriberInterface
 		return array(
 			'core.user_setup'							=> 'load_language_on_setup',
 			'core.page_header'							=> 'add_page_header_link',
-			'core.viewonline_overwrite_location'		=> 'viewonline_page',
-			'core.display_forums_modify_template_vars'	=> 'display_forums_modify_template_vars',
 			'core.permissions'	=> 'add_permissions',
 			'boardtools.cronstatus.modify_cron_task'   => 'add_my_cron_task',
 			'boardtools.cronstatus.modify_cron_config'   => 'modify_cronlock',			
@@ -118,32 +116,6 @@ class main_listener implements EventSubscriberInterface
 		));
 	}
 
-	/**
-	 * Show users viewing Minty Competition Automation page on the Who Is Online page
-	 *
-	 * @param \phpbb\event\data	$event	Event object
-	 */
-	public function viewonline_page($event)
-	{
-		if ($event['on_page'][1] === 'app' && strrpos($event['row']['session_page'], 'app.' . $this->php_ext . '/minty') === 0)
-		{
-			$event['location'] = $this->language->lang('VIEWING_MINTY_COMPETITIONS');
-			$event['location_url'] = $this->helper->route('minty_competitions_controller', array('name' => 'automation'));
-		}
-	}
-
-	/**
-	 * A sample PHP event
-	 * Modifies the names of the forums on index
-	 *
-	 * @param \phpbb\event\data	$event	Event object
-	 */
-	public function display_forums_modify_template_vars($event)
-	{
-		$forum_row = $event['forum_row'];
-		$forum_row['FORUM_NAME'] .= $this->language->lang('COMPETITIONS_EVENT');
-		$event['forum_row'] = $forum_row;
-	}
 
 	/**
 	 * Add permissions to the ACP -> Permissions settings page

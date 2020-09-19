@@ -85,7 +85,9 @@ class acp_controller
 			if (empty($errors))
 			{
 				// Set the options the user configured
-				$this->config->set('minty_competitions_goodbye', $this->request->variable('minty_competitions_goodbye', 0));
+				$this->config->set('minty_sponsor_forum', $this->request->variable('minty_sponsor_forum', $this->config['minty_sponsor_forum']));
+				$this->config->set('minty_rule_forum', $this->request->variable('minty_rule_forum', $this->config['minty_rule_forum']));
+				$this->config->set('minty_prize_forum', $this->request->variable('minty_prize_forum', $this->config['minty_prize_forum']));
 
 				// Add option settings change action to the admin log
 				$this->log->add('admin', $this->user->data['user_id'], $this->user->ip, 'LOG_ACP_COMPETITIONS_SETTINGS');
@@ -102,10 +104,12 @@ class acp_controller
 		$this->template->assign_vars(array(
 			'S_ERROR'		=> $s_errors,
 			'ERROR_MSG'		=> $s_errors ? implode('<br />', $errors) : '',
-
 			'U_ACTION'		=> $this->u_action,
-
 			'MINTY_COMPETITIONS_GOODBYE'	=> (bool) $this->config['minty_competitions_goodbye'],
+			'SPONSOR_FORUM_OPTIONS' => make_forum_select($this->config['minty_sponsor_forum'], false, false, false),
+			'RULE_FORUM_OPTIONS' => make_forum_select($this->config['minty_rule_forum'], false, false, false),
+			'PRIZE_FORUM_OPTIONS' => make_forum_select($this->config['minty_prize_forum'], false, false, false),
+
 		));
 	}
 

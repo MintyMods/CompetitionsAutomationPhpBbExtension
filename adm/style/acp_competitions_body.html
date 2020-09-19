@@ -10,19 +10,42 @@
 {% endif %}
 
 <form id="minty_competitions_acp" name="minty_competitions_acp" method="post" action="{{ U_ACTION }}">
-
+	<br/>
 	<fieldset>
+	<legend>{{ lang('SPONSOR_FORUM_SELECT') ~ lang('COLON') }}</legend>
+	<dl>
+		<dt><label for="minty_sponsor_forum">{{ lang('SPONSOR_FORUM_DESC') ~ lang('COLON') }}</label></dt>
+		<dd><select id="minty_sponsor_forum" name="minty_sponsor_forum">{SPONSOR_FORUM_OPTIONS}</select></dd>
+	</dl>
+	</fieldset>
+	<fieldset>
+		
+	<legend>{{ lang('RULE_FORUM_SELECT') ~ lang('COLON') }}</legend>
+	<dl>
+		<dt><label for="minty_rule_forum">{{ lang('RULE_FORUM_DESC') ~ lang('COLON') }}</label></dt>
+		<dd><select id="minty_rule_forum" name="minty_rule_forum">{RULE_FORUM_OPTIONS}</select></dd>
+	</dl>
+</fieldset>
+<fieldset>
+	<legend>{{ lang('PRIZE_FORUM_SELECT') ~ lang('COLON') }}</legend>
+	<dl>
+		<dt><label for="minty_prize_forum">{{ lang('PRIZE_FORUM_DESC') ~ lang('COLON') }}</label></dt>
+		<dd><select id="minty_prize_forum" name="minty_prize_forum">{PRIZE_FORUM_OPTIONS}</select></dd>
+	</dl>
+	</fieldset>
+
+	<!--fieldset>
 		<legend>{{ lang('SETTINGS') }}</legend>
 		<dl>
 			<dt><label for="minty_competitions_goodbye">{{ lang('ACP_COMPETITIONS_GOODBYE') ~ lang('COLON') }}</label></dt>
 			<dd><label><input type="radio" class="radio" name="minty_competitions_goodbye" value="1"{% if MINTY_COMPETITIONS_GOODBYE %} checked="checked"{% endif %} /> {{ lang('YES') }}</label>
 				<label><input type="radio" class="radio" name="minty_competitions_goodbye" value="0"{% if not MINTY_COMPETITIONS_GOODBYE %} checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
 		</dl>
-	</fieldset>
+	</fieldset-->
 
 	<fieldset class="submit-buttons">
 		<input class="button1" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}" />&nbsp;
-		<input class="button2" type="submit" id="preview" name="preview" value="{{ lang('PREVIEW') }}" />
+		<!--input class="button2" type="submit" id="preview" name="preview" value="{{ lang('PREVIEW') }}" /-->
 		{{ S_FORM_TOKEN }}
 	</fieldset>
 
