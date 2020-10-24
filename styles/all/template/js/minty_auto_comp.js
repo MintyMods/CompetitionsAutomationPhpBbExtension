@@ -99,8 +99,10 @@ window.addEventListener("DOMContentLoaded", function(){
     let created_by = [{ "key": "DEFAULT", "label": "Select who created" }];
     let claimed_by = [{ "key": "DEFAULT", "label": "Select who Won" }];
     let posted_to = [{ "key": "DEFAULT", "label": "Grow Room 420 Competitions" }];
+    let archive_to = [{ "key": "DEFAULT", "label": "Grow Room 420 Competitions" }];
     let status = [{ "key": "ACTIVE", "label": "Active" },{ "key": "DISABLED", "label": "Disabled" },{ "key": "POSTED", "label": "Posted" }];
     
+    //debugger;
     sponsors = loadJSON('sponsors');
     templates = loadJSON('templates?sponsor_id=8');
     

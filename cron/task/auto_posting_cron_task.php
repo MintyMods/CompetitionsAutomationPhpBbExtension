@@ -34,7 +34,7 @@ class auto_posting_cron_task extends \phpbb\cron\task\base
 	* @param \phpbb\log\log $log The phpBB log system
 	* @param \phpbb\db\driver\driver_interface $db The db connection
 	*/
-	public function __construct( \phpbb\config\config $config, \phpbb\user $user, \phpbb\log\log $log, \phpbb\db\driver\factory $dbal, \phpbb\auth\auth $auth, $phpbb_root_path, $php_ext) {
+	public function __construct( \phpbb\config\config $config, \phpbb\user $user, \phpbb\log\log $log, \phpbb\db\driver\factory $dbal, \phpbb\auth\auth $auth, $phpbb_root_path, $php_ext, $table_name) {
 		include_once($phpbb_root_path . 'includes/functions_posting.' . $php_ext);
 		$this->config = $config;
 		$this->user = $user;
@@ -43,6 +43,7 @@ class auto_posting_cron_task extends \phpbb\cron\task\base
 		$this->auth = $auth;
 		$this->phpbb_root_path = $phpbb_root_path;
 		$this->php_ext = $php_ext;
+		$this->table_name = $table_name;
 	}
 	
 	/**

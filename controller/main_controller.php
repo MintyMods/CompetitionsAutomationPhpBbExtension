@@ -46,7 +46,7 @@ class main_controller
 
 	protected $log_file = "H:/Development/XAMPP/apps/phpbb/htdocs/ext/minty/competitions/minty_debug.log";
 
-	protected $table_name = "phpbb_minty_competition_events";
+	protected $table_name = "phpbb_minty_competition_events"; // @todo
 
 	/**
 	 * Constructor
@@ -65,7 +65,9 @@ class main_controller
 								\phpbb\user $user, 
 								\phpbb\request\request $request, 
 								\phpbb\db\driver\factory $dbal,
-								\phpbb\log\log $log) {
+								\phpbb\log\log $log,
+								$table_name
+								) {
 		$this->config	= $config;
 		$this->helper	= $helper;
 		$this->template	= $template;
@@ -75,6 +77,7 @@ class main_controller
 		$this->request = $request;
 		$this->db = $dbal;
 		$this->log		= $log;
+		$this->table_name = $table_name;
 	}
 
 	
@@ -92,6 +95,11 @@ class main_controller
 			$this->getSponsors($name); 
 		} else if ($name == 'templates') {
 			$this->getSponsorTemplates($name); 
+		} else if ($name == 'post_to_forum') {
+			$this->getPostToForum($name); 			
+		} else if ($name == 'archive_to_forum') {
+			$this->getArchiveToForum($name); 			
+
 		} else if ($name == 'automation') {
 			 return $this->helper->render('@minty_competitions/competitions_body.html', $name);
 		} else  {
@@ -107,7 +115,23 @@ class main_controller
 				break;
 			}
 		}
+
+		$this->template->assign_vars(array(
+			'PRIZE_FORUM_OPTIONS' => make_forum_select($this->config['minty_prize_forum'], false, false, false)
+		));
+
 		return $this->helper->render('@minty_competitions/competitions_body.html', $name);
+	}
+
+	
+	function getPostToForum() {
+		// <select id="minty_prize_forum" name="minty_prize_forum">{PRIZE_FORUM_OPTIONS}</select>
+
+
+	}
+
+	function getArchiveToForum() {
+
 	}
 
 	function getSponsorTemplates() {

@@ -14,6 +14,7 @@ services:
             - '@request'
             - '@dbal.conn'
             - '@log'
+            - '%minty.competitions.tables.competitions_table%'
 
     minty.competitions.controller.acp:
         class: minty\competitions\controller\acp_controller
@@ -57,7 +58,8 @@ services:
             - '@dbal.conn'
             - '@auth'
             - '%core.root_path%'
-            - '%core.php_ext%'            
+            - '%core.php_ext%'
+            - '%minty.competitions.tables.competitions_table%'            
         calls:
             - [set_name, [cron.task.auto_posting_cron_task]]
         tags:

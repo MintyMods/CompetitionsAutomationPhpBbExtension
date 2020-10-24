@@ -209,3 +209,233 @@ SELECT id,start_date,end_date,text,sponsor,status FROM phpbb_minty_competition_e
 
 Done in 0.012129068374634s
 
+
+
+====================================
+Log started, 19/09/2020 10:44:31
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text,sponsor,status FROM phpbb_minty_competition_events
+
+Done in 0.0091919898986816s
+
+
+
+====================================
+Log started, 19/09/2020 10:44:55
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+15_id => 15
+15_start_date => 2020-09-16 00:00
+15_end_date => 2020-09-20 00:00
+15_text => New event
+15_sponsor => 7
+15_status => ACTIVE
+15_!nativeeditor_status => updated
+ids => 15
+
+Row data [15]
+id => 15
+start_date => 2020-09-16 00:00
+end_date => 2020-09-20 00:00
+text => New event
+sponsor => 7
+status => ACTIVE
+!nativeeditor_status => updated
+
+UPDATE phpbb_minty_competition_events SET start_date='2020-09-16 00:00',end_date='2020-09-20 00:00',text='New event',sponsor='7',status='ACTIVE' WHERE id='15'
+
+Edit operation finished
+0 => action:updated; sid:15; tid:15;
+
+Done in 0.019650936126709s
+
+
+
+====================================
+Log started, 19/09/2020 10:44:57
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+15_id => 15
+15_start_date => 2020-09-08 00:00
+15_end_date => 2020-09-12 00:00
+15_text => New event
+15_sponsor => 7
+15_status => ACTIVE
+15_!nativeeditor_status => updated
+ids => 15
+
+Row data [15]
+id => 15
+start_date => 2020-09-08 00:00
+end_date => 2020-09-12 00:00
+text => New event
+sponsor => 7
+status => ACTIVE
+!nativeeditor_status => updated
+
+UPDATE phpbb_minty_competition_events SET start_date='2020-09-08 00:00',end_date='2020-09-12 00:00',text='New event',sponsor='7',status='ACTIVE' WHERE id='15'
+
+Edit operation finished
+0 => action:updated; sid:15; tid:15;
+
+Done in 0.019023895263672s
+
+
+
+====================================
+Log started, 19/09/2020 10:46:09
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+15_id => 15
+15_start_date => 2020-09-08 00:00
+15_end_date => 2020-09-12 00:00
+15_text => New event
+15_sponsor => 8
+15_status => ACTIVE
+15_!nativeeditor_status => updated
+15_template => 
+15_rules => DEFAULT
+15_prize => DEFAULT
+15_post_to => DEFAULT
+ids => 15
+
+Row data [15]
+id => 15
+start_date => 2020-09-08 00:00
+end_date => 2020-09-12 00:00
+text => New event
+sponsor => 8
+status => ACTIVE
+!nativeeditor_status => updated
+template => 
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+
+UPDATE phpbb_minty_competition_events SET start_date='2020-09-08 00:00',end_date='2020-09-12 00:00',text='New event',sponsor='8',status='ACTIVE' WHERE id='15'
+
+Edit operation finished
+0 => action:updated; sid:15; tid:15;
+
+Done in 0.021423101425171s
+
+
+
+====================================
+Log started, 19/09/2020 10:46:23
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+15_id => 15
+15_start_date => 2020-09-08 00:00
+15_end_date => 2020-09-12 00:00
+15_text => test
+15_sponsor => 8
+15_status => ACTIVE
+15_!nativeeditor_status => updated
+15_template => 
+15_rules => DEFAULT
+15_prize => DEFAULT
+15_post_to => DEFAULT
+ids => 15
+
+Row data [15]
+id => 15
+start_date => 2020-09-08 00:00
+end_date => 2020-09-12 00:00
+text => test
+sponsor => 8
+status => ACTIVE
+!nativeeditor_status => updated
+template => 
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+
+UPDATE phpbb_minty_competition_events SET start_date='2020-09-08 00:00',end_date='2020-09-12 00:00',text='test',sponsor='8',status='ACTIVE' WHERE id='15'
+
+Edit operation finished
+0 => action:updated; sid:15; tid:15;
+
+Done in 0.021335124969482s
+
+
+
+====================================
+Log started, 19/09/2020 10:47:09
+====================================
+
+Minty Competition Logging Enabled
+
+DataProcessor object initialized
+15_id => 15
+15_start_date => 2020-09-08 00:00
+15_end_date => 2020-09-12 00:00
+15_text => test
+15_sponsor => 8
+15_status => ACTIVE
+15_!nativeeditor_status => updated
+15_template => 
+15_rules => DEFAULT
+15_prize => DEFAULT
+15_post_to => DEFAULT
+ids => 15
+
+Row data [15]
+id => 15
+start_date => 2020-09-08 00:00
+end_date => 2020-09-12 00:00
+text => test
+sponsor => 8
+status => ACTIVE
+!nativeeditor_status => updated
+template => 
+rules => DEFAULT
+prize => DEFAULT
+post_to => DEFAULT
+
+UPDATE phpbb_minty_competition_events SET start_date='2020-09-08 00:00',end_date='2020-09-12 00:00',text='test',sponsor='8',status='ACTIVE' WHERE id='15'
+
+Edit operation finished
+0 => action:updated; sid:15; tid:15;
+
+Done in 0.017764091491699s
+
+
+
+====================================
+Log started, 19/09/2020 10:48:13
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text,sponsor,status FROM phpbb_minty_competition_events
+
+Done in 0.0094430446624756s
+
+
+
+====================================
+Log started, 19/09/2020 11:03:08
+====================================
+
+Minty Competition Logging Enabled
+
+SELECT id,start_date,end_date,text,sponsor,status FROM phpbb_minty_competition_events
+
+Done in 0.01314902305603s
+
